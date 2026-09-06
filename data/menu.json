@@ -1,0 +1,1215 @@
+[
+  {
+    "id": "burger_bigmac",
+    "category": "burger",
+    "name": "빅맥",
+    "nameEn": "Big Mac",
+    "price": 6300,
+    "temperature": "none",
+    "emoji": "🍔",
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Big_Mac_hamburger.jpg?width=400",
+    "badge": "인기",
+    "tags": [
+      "대표",
+      "비프"
+    ],
+    "aliases": [
+      "빅맥버거",
+      "빅맥세트",
+      "빅맥"
+    ]
+  },
+  {
+    "id": "burger_double_qp",
+    "category": "burger",
+    "name": "더블 쿼터파운더 치즈",
+    "nameEn": "Double Quarter Pounder",
+    "price": 8200,
+    "temperature": "none",
+    "emoji": "🍔",
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Cheeseburger.jpg?width=400",
+    "badge": "추천",
+    "tags": [
+      "비프",
+      "치즈"
+    ],
+    "aliases": [
+      "쿼터파운더",
+      "더블쿼터"
+    ]
+  },
+  {
+    "id": "burger_shanghai",
+    "category": "burger",
+    "name": "맥스파이시 상하이",
+    "nameEn": "McSpicy Shanghai",
+    "price": 5900,
+    "temperature": "none",
+    "emoji": "🍔",
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/ChickFilA-ChickenSandwich.jpg?width=400",
+    "badge": "",
+    "tags": [
+      "치킨",
+      "매운맛"
+    ],
+    "aliases": [
+      "상하이버거",
+      "상하이",
+      "스파이시버거"
+    ]
+  },
+  {
+    "id": "burger_bulgogi",
+    "category": "burger",
+    "name": "불고기 버거",
+    "nameEn": "Bulgogi Burger",
+    "price": 4000,
+    "temperature": "none",
+    "emoji": "🍔",
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Cheeseburger_2.jpg?width=400",
+    "badge": "",
+    "tags": [
+      "불고기"
+    ],
+    "aliases": [
+      "불고기버거"
+    ]
+  },
+  {
+    "id": "burger_tomato_cheese",
+    "category": "burger",
+    "name": "토마토 치즈 비프",
+    "nameEn": "Tomato Cheese Beef",
+    "price": 4600,
+    "temperature": "none",
+    "emoji": "🍔",
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Cheeseburger_on_a_plate.jpg?width=400",
+    "badge": "",
+    "tags": [
+      "비프",
+      "치즈"
+    ],
+    "aliases": [
+      "토마토치즈버거"
+    ]
+  },
+  {
+    "id": "burger_cheese",
+    "category": "burger",
+    "name": "치즈버거",
+    "nameEn": "Cheeseburger",
+    "price": 3800,
+    "temperature": "none",
+    "emoji": "🍔",
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Cheeseburger.jpg?width=400",
+    "badge": "",
+    "tags": [
+      "치즈"
+    ],
+    "aliases": [
+      "치즈버거",
+      "치즈"
+    ]
+  },
+  {
+    "id": "burger_bacon_deluxe",
+    "category": "burger",
+    "name": "베이컨 토마토 디럭스",
+    "nameEn": "Bacon Tomato Deluxe",
+    "price": 6700,
+    "temperature": "none",
+    "emoji": "🍔",
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Burger_and_fries_%281%29.jpg?width=400",
+    "badge": "",
+    "tags": [
+      "베이컨"
+    ],
+    "aliases": [
+      "베토디",
+      "베이컨버거"
+    ]
+  },
+  {
+    "id": "burger_1955",
+    "category": "burger",
+    "name": "1955 버거",
+    "nameEn": "1955 Burger",
+    "price": 6500,
+    "temperature": "none",
+    "emoji": "🍔",
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Cheeseburger_2.jpg?width=400",
+    "badge": "",
+    "tags": [
+      "비프"
+    ],
+    "aliases": [
+      "천구백오십오",
+      "1955"
+    ]
+  },
+  {
+    "id": "burger_shrimp",
+    "category": "burger",
+    "name": "새우버거",
+    "nameEn": "Shrimp Burger",
+    "price": 4000,
+    "temperature": "none",
+    "emoji": "🍤",
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/KFC_Shrimp_Burger_2007.jpg?width=400",
+    "badge": "NEW",
+    "tags": [
+      "새우"
+    ],
+    "aliases": [
+      "새우버거",
+      "쉬림프버거"
+    ]
+  },
+  {
+    "id": "burger_chicken",
+    "category": "burger",
+    "name": "치킨버거",
+    "nameEn": "Chicken Burger",
+    "price": 4000,
+    "temperature": "none",
+    "emoji": "🍗",
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/ChickFilA-ChickenSandwich.jpg?width=400",
+    "badge": "NEW",
+    "tags": [
+      "치킨"
+    ],
+    "aliases": [
+      "치킨버거",
+      "닭버거"
+    ]
+  },
+  {
+    "id": "coffee_americano",
+    "category": "coffee",
+    "name": "아메리카노",
+    "nameEn": "Americano",
+    "price": 2500,
+    "priceHot": 2300,
+    "priceIce": 2500,
+    "temperature": "both",
+    "emoji": "☕",
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Black_coffee_cup_%28Unsplash%29.jpg?width=400",
+    "badge": "인기",
+    "tags": [
+      "커피",
+      "기본"
+    ],
+    "aliases": [
+      "아아",
+      "따아",
+      "아메",
+      "커피",
+      "아메리카노"
+    ]
+  },
+  {
+    "id": "coffee_latte",
+    "category": "coffee",
+    "name": "카페라떼",
+    "nameEn": "Caffe Latte",
+    "price": 3900,
+    "priceHot": 3900,
+    "priceIce": 3900,
+    "temperature": "both",
+    "emoji": "☕",
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Cafe_Latte.jpg?width=400",
+    "badge": "",
+    "tags": [
+      "커피",
+      "라떼"
+    ],
+    "aliases": [
+      "라떼",
+      "카페라떼",
+      "카페라테"
+    ]
+  },
+  {
+    "id": "coffee_cappuccino",
+    "category": "coffee",
+    "name": "카푸치노",
+    "nameEn": "Cappuccino",
+    "price": 3900,
+    "priceHot": 3900,
+    "priceIce": 3900,
+    "temperature": "both",
+    "emoji": "☕",
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Cappuccino.jpg?width=400",
+    "badge": "",
+    "tags": [
+      "커피"
+    ],
+    "aliases": [
+      "카푸치노",
+      "카푸찌노"
+    ]
+  },
+  {
+    "id": "coffee_mocha",
+    "category": "coffee",
+    "name": "카페모카",
+    "nameEn": "Caffe Mocha",
+    "price": 4900,
+    "priceHot": 4900,
+    "priceIce": 4900,
+    "temperature": "both",
+    "emoji": "☕",
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Cafe_Latte.jpg?width=400",
+    "badge": "",
+    "tags": [
+      "커피",
+      "초코"
+    ],
+    "aliases": [
+      "모카",
+      "카페모카"
+    ]
+  },
+  {
+    "id": "coffee_vanilla_latte",
+    "category": "coffee",
+    "name": "바닐라라떼",
+    "nameEn": "Vanilla Latte",
+    "price": 4300,
+    "priceHot": 4300,
+    "priceIce": 4300,
+    "temperature": "both",
+    "emoji": "☕",
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Cafe_Latte.jpg?width=400",
+    "badge": "",
+    "tags": [
+      "커피",
+      "라떼",
+      "바닐라"
+    ],
+    "aliases": [
+      "바닐라라떼",
+      "바닐라라테"
+    ]
+  },
+  {
+    "id": "coffee_matcha_latte",
+    "category": "coffee",
+    "name": "말차라떼",
+    "nameEn": "Matcha Latte",
+    "price": 4000,
+    "temperature": "both",
+    "emoji": "🍵",
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Matcha_latte.jpg?width=400",
+    "badge": "",
+    "tags": [
+      "커피",
+      "말차"
+    ],
+    "aliases": [
+      "말차라떼",
+      "말차라테",
+      "그린티라떼",
+      "matcha"
+    ],
+    "priceHot": 4000,
+    "priceIce": 4000
+  },
+  {
+    "id": "bunsik_gimbap",
+    "category": "bunsik",
+    "name": "김가네김밥",
+    "nameEn": "Gimbap",
+    "price": 5500,
+    "temperature": "none",
+    "emoji": "🍙",
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Gimbap_by_iankasley_at_Koreana_Plaza%2C_Oakland.jpg?width=400",
+    "badge": "인기",
+    "tags": [
+      "김밥"
+    ],
+    "aliases": [
+      "김밥",
+      "김가네김밥",
+      "기본김밥"
+    ]
+  },
+  {
+    "id": "bunsik_tuna_gimbap",
+    "category": "bunsik",
+    "name": "참치마요김밥",
+    "nameEn": "Tuna Mayo Gimbap",
+    "price": 6500,
+    "temperature": "none",
+    "emoji": "🍙",
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Gimbap_with_meat.png?width=400",
+    "badge": "",
+    "tags": [
+      "김밥",
+      "참치"
+    ],
+    "aliases": [
+      "참치김밥",
+      "참치마요김밥"
+    ]
+  },
+  {
+    "id": "bunsik_katsu_gimbap",
+    "category": "bunsik",
+    "name": "돈까스김밥",
+    "nameEn": "Katsu Gimbap",
+    "price": 7000,
+    "temperature": "none",
+    "emoji": "🍙",
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Chungmu-gimbap.png?width=400",
+    "badge": "",
+    "tags": [
+      "김밥",
+      "돈까스"
+    ],
+    "aliases": [
+      "돈까스김밥",
+      "돈가스김밥"
+    ]
+  },
+  {
+    "id": "bunsik_beef_gimbap",
+    "category": "bunsik",
+    "name": "소고기김밥",
+    "nameEn": "Beef Gimbap",
+    "price": 7000,
+    "temperature": "none",
+    "emoji": "🍙",
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Gimbap_with_beef_sausage%2C_Myung_Ga_Kimbap.jpg?width=400",
+    "badge": "",
+    "tags": [
+      "김밥",
+      "소고기"
+    ],
+    "aliases": [
+      "소고기김밥"
+    ]
+  },
+  {
+    "id": "bunsik_tteokbokki",
+    "category": "bunsik",
+    "name": "떡볶이",
+    "nameEn": "Tteokbokki",
+    "price": 8000,
+    "temperature": "none",
+    "emoji": "🌶️",
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Korean_rice_cake_%28tteokbokki%29.jpg?width=400",
+    "badge": "인기",
+    "tags": [
+      "분식",
+      "매운맛"
+    ],
+    "aliases": [
+      "떡볶이",
+      "떡뽁이"
+    ]
+  },
+  {
+    "id": "bunsik_rabokki",
+    "category": "bunsik",
+    "name": "라볶이",
+    "nameEn": "Rabokki",
+    "price": 9000,
+    "temperature": "none",
+    "emoji": "🍜",
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Korean_rice_cake_%28tteokbokki%29.jpg?width=400",
+    "badge": "",
+    "tags": [
+      "분식"
+    ],
+    "aliases": [
+      "라볶이",
+      "라볶기"
+    ]
+  },
+  {
+    "id": "bunsik_jjolmyeon",
+    "category": "bunsik",
+    "name": "쫄면",
+    "nameEn": "Jjolmyeon",
+    "price": 9000,
+    "temperature": "none",
+    "emoji": "🍜",
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Korean_hot_and_spicy_cold_buckwheat_noodles_with_raw_fish-Hoe_naengmyeon-01.jpg?width=400",
+    "badge": "",
+    "tags": [
+      "분식",
+      "면"
+    ],
+    "aliases": [
+      "쫄면"
+    ]
+  },
+  {
+    "id": "bunsik_tempura_udon",
+    "category": "bunsik",
+    "name": "튀김우동",
+    "nameEn": "Tempura Udon",
+    "price": 10000,
+    "temperature": "none",
+    "emoji": "🍜",
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Marugame_Udon_Shrimp_prawn_tempura_Ebi-TenD.jpg?width=400",
+    "badge": "",
+    "tags": [
+      "분식",
+      "면"
+    ],
+    "aliases": [
+      "튀김우동",
+      "우동"
+    ]
+  },
+  {
+    "id": "bunsik_ddeok_mandu",
+    "category": "bunsik",
+    "name": "떡만두국",
+    "nameEn": "Ddeok Mandu Guk",
+    "price": 10000,
+    "temperature": "none",
+    "emoji": "🥟",
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Korean.food-Tteok.mandu.guk-01.jpg?width=400",
+    "badge": "",
+    "tags": [
+      "분식",
+      "국"
+    ],
+    "aliases": [
+      "떡만두국",
+      "만두국"
+    ]
+  },
+  {
+    "id": "bunsik_cheese_katsu",
+    "category": "bunsik",
+    "name": "치즈돈까스",
+    "nameEn": "Cheese Katsu",
+    "price": 11500,
+    "temperature": "none",
+    "emoji": "🍱",
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Cutlet_Pork_Fillet_with_Franch_Fries_on_Sizzling_Plate.jpg?width=400",
+    "badge": "",
+    "tags": [
+      "분식",
+      "돈까스"
+    ],
+    "aliases": [
+      "치즈돈까스",
+      "치즈돈가스"
+    ]
+  },
+  {
+    "id": "bunsik_jeyuk",
+    "category": "bunsik",
+    "name": "제육덮밥",
+    "nameEn": "Jeyuk Bap",
+    "price": 10000,
+    "temperature": "none",
+    "emoji": "🍚",
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Jeyuk-bokkeum.jpg?width=400",
+    "badge": "",
+    "tags": [
+      "분식",
+      "덮밥"
+    ],
+    "aliases": [
+      "제육덮밥",
+      "제육"
+    ]
+  },
+  {
+    "id": "bunsik_mandu",
+    "category": "bunsik",
+    "name": "찐만두",
+    "nameEn": "Steamed Mandu",
+    "price": 7000,
+    "temperature": "none",
+    "emoji": "🥟",
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Mandu_in_Korean_restaurant.jpg?width=400",
+    "badge": "",
+    "tags": [
+      "분식",
+      "만두"
+    ],
+    "aliases": [
+      "찐만두",
+      "만두"
+    ]
+  },
+  {
+    "id": "korean_kimchi_stew",
+    "category": "korean",
+    "name": "돼지김치찌개",
+    "nameEn": "Pork Kimchi Stew",
+    "price": 10000,
+    "temperature": "none",
+    "emoji": "🍲",
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Korean_stew-Kimchi_jjigae-01.jpg?width=400",
+    "badge": "인기",
+    "tags": [
+      "한식",
+      "찌개"
+    ],
+    "aliases": [
+      "김치찌개",
+      "돼지김치찌개"
+    ]
+  },
+  {
+    "id": "korean_duruchigi",
+    "category": "korean",
+    "name": "통돼지두루치기",
+    "nameEn": "Pork Duruchigi",
+    "price": 13000,
+    "temperature": "none",
+    "emoji": "🥘",
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Jeyuk-bokkeum.jpg?width=400",
+    "badge": "",
+    "tags": [
+      "한식"
+    ],
+    "aliases": [
+      "두루치기",
+      "통돼지두루치기"
+    ]
+  },
+  {
+    "id": "korean_doenjang",
+    "category": "korean",
+    "name": "된장찌개",
+    "nameEn": "Doenjang Jjigae",
+    "price": 8000,
+    "temperature": "none",
+    "emoji": "🍲",
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Korean_stew-Gang_dwenjang_jjigae.jpg?width=400",
+    "badge": "",
+    "tags": [
+      "한식",
+      "찌개"
+    ],
+    "aliases": [
+      "된장찌개",
+      "된장"
+    ]
+  },
+  {
+    "id": "korean_mandu_tangsu",
+    "category": "korean",
+    "name": "만두탕수",
+    "nameEn": "Mandu Tangsu",
+    "price": 7000,
+    "temperature": "none",
+    "emoji": "🥟",
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Tangsuyuk_%28Korean_Chinese_sweet_and_sour_pork%29.jpg?width=400",
+    "badge": "",
+    "tags": [
+      "한식"
+    ],
+    "aliases": [
+      "만두탕수"
+    ]
+  },
+  {
+    "id": "korean_bulgogi",
+    "category": "korean",
+    "name": "직화불고기",
+    "nameEn": "Grilled Bulgogi",
+    "price": 8000,
+    "temperature": "none",
+    "emoji": "🥩",
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Korean_barbecue-Jeju_Island-Bulgogi-01.jpg?width=400",
+    "badge": "",
+    "tags": [
+      "한식",
+      "불고기"
+    ],
+    "aliases": [
+      "직화불고기",
+      "불고기"
+    ]
+  },
+  {
+    "id": "korean_ham_kimchi",
+    "category": "korean",
+    "name": "햄김치찌개",
+    "nameEn": "Ham Kimchi Stew",
+    "price": 9000,
+    "temperature": "none",
+    "emoji": "🍲",
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Korean.cuisine-Budae.jjigae-01.jpg?width=400",
+    "badge": "",
+    "tags": [
+      "한식",
+      "찌개"
+    ],
+    "aliases": [
+      "햄김치찌개",
+      "부대찌개",
+      "김치찌개"
+    ]
+  },
+  {
+    "id": "korean_sundubu",
+    "category": "korean",
+    "name": "북창동순두부",
+    "nameEn": "Sundubu Stew",
+    "price": 11000,
+    "temperature": "none",
+    "emoji": "🍲",
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Korean_stew-Sundubu_jjigae-05.jpg?width=400",
+    "badge": "인기",
+    "tags": [
+      "한식",
+      "순두부"
+    ],
+    "aliases": [
+      "순두부",
+      "북창동순두부",
+      "순두부찌개"
+    ]
+  },
+  {
+    "id": "korean_beef_sundubu",
+    "category": "korean",
+    "name": "소고기순두부",
+    "nameEn": "Beef Sundubu",
+    "price": 11500,
+    "temperature": "none",
+    "emoji": "🍲",
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Korean_stew-Sundubu_jjigae-05.jpg?width=400",
+    "badge": "",
+    "tags": [
+      "한식",
+      "순두부"
+    ],
+    "aliases": [
+      "소고기순두부"
+    ]
+  },
+  {
+    "id": "korean_seafood_sundubu",
+    "category": "korean",
+    "name": "해물순두부",
+    "nameEn": "Seafood Sundubu",
+    "price": 12000,
+    "temperature": "none",
+    "emoji": "🦑",
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Korean_stew-Sundubu_jjigae-05.jpg?width=400",
+    "badge": "",
+    "tags": [
+      "한식",
+      "순두부"
+    ],
+    "aliases": [
+      "해물순두부"
+    ]
+  },
+  {
+    "id": "korean_hamcheese_sundubu",
+    "category": "korean",
+    "name": "햄치즈순두부",
+    "nameEn": "Ham Cheese Sundubu",
+    "price": 11000,
+    "temperature": "none",
+    "emoji": "🧀",
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Korean_stew-Sundubu_jjigae-05.jpg?width=400",
+    "badge": "",
+    "tags": [
+      "한식",
+      "순두부"
+    ],
+    "aliases": [
+      "햄치즈순두부"
+    ]
+  },
+  {
+    "id": "korean_oyster_sundubu",
+    "category": "korean",
+    "name": "통영굴순두부",
+    "nameEn": "Oyster Sundubu",
+    "price": 12000,
+    "temperature": "none",
+    "emoji": "🦪",
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Korean_stew-Sundubu_jjigae-05.jpg?width=400",
+    "badge": "",
+    "tags": [
+      "한식",
+      "순두부"
+    ],
+    "aliases": [
+      "굴순두부",
+      "통영굴순두부"
+    ]
+  },
+  {
+    "id": "korean_dubu_kimchi",
+    "category": "korean",
+    "name": "두부김치",
+    "nameEn": "Dubu Kimchi",
+    "price": 6900,
+    "temperature": "none",
+    "emoji": "🥬",
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Dubu-kimchi.jpg?width=400",
+    "badge": "",
+    "tags": [
+      "한식",
+      "곁들임"
+    ],
+    "aliases": [
+      "두부김치"
+    ]
+  },
+  {
+    "id": "chinese_jjamppong",
+    "category": "chinese",
+    "name": "짬뽕",
+    "nameEn": "Jjamppong",
+    "price": 9500,
+    "temperature": "none",
+    "emoji": "🍜",
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Jjampong.JPG?width=400",
+    "badge": "인기",
+    "tags": [
+      "중식",
+      "면"
+    ],
+    "aliases": [
+      "짬뽕",
+      "짬봉"
+    ]
+  },
+  {
+    "id": "chinese_jjamppong_bap",
+    "category": "chinese",
+    "name": "짬뽕밥",
+    "nameEn": "Jjamppong Bap",
+    "price": 10000,
+    "temperature": "none",
+    "emoji": "🍚",
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Jjampong.JPG?width=400",
+    "badge": "",
+    "tags": [
+      "중식",
+      "밥"
+    ],
+    "aliases": [
+      "짬뽕밥"
+    ]
+  },
+  {
+    "id": "chinese_jjajang",
+    "category": "chinese",
+    "name": "유니짜장",
+    "nameEn": "Uni Jjajang",
+    "price": 8000,
+    "temperature": "none",
+    "emoji": "🍜",
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Korean.cuisine-Jajangmyeon-01.jpg?width=400",
+    "badge": "인기",
+    "tags": [
+      "중식",
+      "면"
+    ],
+    "aliases": [
+      "짜장면",
+      "짜장",
+      "유니짜장"
+    ]
+  },
+  {
+    "id": "chinese_jjajang_bap",
+    "category": "chinese",
+    "name": "유니짜장밥",
+    "nameEn": "Uni Jjajang Bap",
+    "price": 9000,
+    "temperature": "none",
+    "emoji": "🍚",
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Korean.cuisine-Jajangmyeon-01.jpg?width=400",
+    "badge": "",
+    "tags": [
+      "중식",
+      "밥"
+    ],
+    "aliases": [
+      "짜장밥",
+      "유니짜장밥"
+    ]
+  },
+  {
+    "id": "chinese_jjamppong_gob",
+    "category": "chinese",
+    "name": "짬뽕 곱빼기",
+    "nameEn": "Jjamppong Large",
+    "price": 10500,
+    "temperature": "none",
+    "emoji": "🍜",
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Jjampong.JPG?width=400",
+    "badge": "",
+    "tags": [
+      "중식",
+      "면"
+    ],
+    "aliases": [
+      "짬뽕곱빼기",
+      "짬뽕곱배기"
+    ]
+  },
+  {
+    "id": "chinese_jjajang_gob",
+    "category": "chinese",
+    "name": "유니짜장 곱빼기",
+    "nameEn": "Jjajang Large",
+    "price": 9000,
+    "temperature": "none",
+    "emoji": "🍜",
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Korean.cuisine-Jajangmyeon-01.jpg?width=400",
+    "badge": "",
+    "tags": [
+      "중식",
+      "면"
+    ],
+    "aliases": [
+      "짜장곱빼기",
+      "유니짜장곱배기"
+    ]
+  },
+  {
+    "id": "chinese_tangsu_s",
+    "category": "chinese",
+    "name": "탕수육 (소)",
+    "nameEn": "Tangsuyuk S",
+    "price": 17000,
+    "temperature": "none",
+    "emoji": "🍖",
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Tangsuyuk_%28Korean_Chinese_sweet_and_sour_pork%29.jpg?width=400",
+    "badge": "추천",
+    "tags": [
+      "중식",
+      "요리"
+    ],
+    "aliases": [
+      "탕수육",
+      "탕수육소"
+    ]
+  },
+  {
+    "id": "chinese_tangsu_m",
+    "category": "chinese",
+    "name": "탕수육 (중)",
+    "nameEn": "Tangsuyuk M",
+    "price": 24000,
+    "temperature": "none",
+    "emoji": "🍖",
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Korean_Chinese_cuisine-sweet_and_sour_pork-Tangsuyuk.jpg?width=400",
+    "badge": "",
+    "tags": [
+      "중식",
+      "요리"
+    ],
+    "aliases": [
+      "탕수육중"
+    ]
+  },
+  {
+    "id": "chinese_gunmandu6",
+    "category": "chinese",
+    "name": "군만두 (6개)",
+    "nameEn": "Fried Mandu 6",
+    "price": 6000,
+    "temperature": "none",
+    "emoji": "🥟",
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Korean_grilled_dumpling-Gunmandu-01.jpg?width=400",
+    "badge": "",
+    "tags": [
+      "중식",
+      "만두"
+    ],
+    "aliases": [
+      "군만두"
+    ]
+  },
+  {
+    "id": "chinese_mulmandu",
+    "category": "chinese",
+    "name": "물만두",
+    "nameEn": "Water Mandu",
+    "price": 6500,
+    "temperature": "none",
+    "emoji": "🥟",
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Mandu_in_Korean_restaurant.jpg?width=400",
+    "badge": "",
+    "tags": [
+      "중식",
+      "만두"
+    ],
+    "aliases": [
+      "물만두"
+    ]
+  },
+  {
+    "id": "chinese_gunmandu10",
+    "category": "chinese",
+    "name": "군만두 (10개)",
+    "nameEn": "Fried Mandu 10",
+    "price": 8000,
+    "temperature": "none",
+    "emoji": "🥟",
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Korean_grilled_dumpling-Gunmandu-01.jpg?width=400",
+    "badge": "",
+    "tags": [
+      "중식",
+      "만두"
+    ],
+    "aliases": [
+      "군만두10"
+    ]
+  },
+  {
+    "id": "chinese_kongguksu",
+    "category": "chinese",
+    "name": "콩국수",
+    "nameEn": "Kong Guksu",
+    "price": 10000,
+    "temperature": "none",
+    "emoji": "🍜",
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Korean_noodles-Kongguksu-01.jpg?width=400",
+    "badge": "",
+    "tags": [
+      "중식",
+      "계절"
+    ],
+    "aliases": [
+      "콩국수"
+    ]
+  },
+  {
+    "id": "western_donkatsu",
+    "category": "western",
+    "name": "기본 돈가스",
+    "nameEn": "Pork Katsu",
+    "price": 11000,
+    "temperature": "none",
+    "emoji": "🍱",
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Tonkatsu_of_Kimukatsu.jpg?width=400",
+    "badge": "인기",
+    "tags": [
+      "양식",
+      "돈가스"
+    ],
+    "aliases": [
+      "돈가스",
+      "돈까스",
+      "기본돈가스"
+    ]
+  },
+  {
+    "id": "western_veggie_katsu",
+    "category": "western",
+    "name": "야채 오리엔탈 돈가스",
+    "nameEn": "Oriental Katsu",
+    "price": 12000,
+    "temperature": "none",
+    "emoji": "🍱",
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Pork_loin_cutlet_set_meal_of_Matsunoya.jpg?width=400",
+    "badge": "",
+    "tags": [
+      "양식",
+      "돈가스"
+    ],
+    "aliases": [
+      "야채돈가스",
+      "오리엔탈돈가스"
+    ]
+  },
+  {
+    "id": "western_signature_katsu",
+    "category": "western",
+    "name": "시그니처 돈가스",
+    "nameEn": "Signature Katsu",
+    "price": 11000,
+    "temperature": "none",
+    "emoji": "🍱",
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Yamato_Pork_Cutlet_by_TonQ.jpg?width=400",
+    "badge": "추천",
+    "tags": [
+      "양식",
+      "돈가스"
+    ],
+    "aliases": [
+      "시그니처돈가스"
+    ]
+  },
+  {
+    "id": "western_kimchi_katsu",
+    "category": "western",
+    "name": "김치찌개 돈가스",
+    "nameEn": "Kimchi Katsu",
+    "price": 11500,
+    "temperature": "none",
+    "emoji": "🍱",
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Pork_cutlet%2C_Tonkatsu_Menu%2C_Tonkatsu_Tombo%2C_Paris_6_December_2016_002.jpg?width=400",
+    "badge": "",
+    "tags": [
+      "양식",
+      "돈가스"
+    ],
+    "aliases": [
+      "김치찌개돈가스"
+    ]
+  },
+  {
+    "id": "western_katsu_don",
+    "category": "western",
+    "name": "돈가스 덮밥",
+    "nameEn": "Katsu Don",
+    "price": 12000,
+    "temperature": "none",
+    "emoji": "🍚",
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Katsudon_of_Fuji-soba.jpg?width=400",
+    "badge": "",
+    "tags": [
+      "양식",
+      "덮밥"
+    ],
+    "aliases": [
+      "돈가스덮밥",
+      "가츠동"
+    ]
+  },
+  {
+    "id": "western_curry",
+    "category": "western",
+    "name": "카레 덮밥",
+    "nameEn": "Curry Rice",
+    "price": 10500,
+    "temperature": "none",
+    "emoji": "🍛",
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Sukiya_Beef_Curry_Rice.jpg?width=400",
+    "badge": "",
+    "tags": [
+      "양식",
+      "덮밥"
+    ],
+    "aliases": [
+      "카레",
+      "카레덮밥"
+    ]
+  },
+  {
+    "id": "western_udon",
+    "category": "western",
+    "name": "기본 우동",
+    "nameEn": "Udon",
+    "price": 9500,
+    "temperature": "none",
+    "emoji": "🍜",
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Vegetable_udon_noodle_soup.jpg?width=400",
+    "badge": "",
+    "tags": [
+      "양식",
+      "면"
+    ],
+    "aliases": [
+      "우동",
+      "기본우동"
+    ]
+  },
+  {
+    "id": "western_seafood_udon",
+    "category": "western",
+    "name": "해물 우동",
+    "nameEn": "Seafood Udon",
+    "price": 8000,
+    "temperature": "none",
+    "emoji": "🦐",
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Marugame_Udon_Shrimp_prawn_tempura_Ebi-TenD.jpg?width=400",
+    "badge": "",
+    "tags": [
+      "양식",
+      "면"
+    ],
+    "aliases": [
+      "해물우동"
+    ]
+  },
+  {
+    "id": "western_fried_udon",
+    "category": "western",
+    "name": "해물 볶음우동",
+    "nameEn": "Stir-fried Udon",
+    "price": 10500,
+    "temperature": "none",
+    "emoji": "🍜",
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Kamut_Udon_Noodles_with_Vegetables_%285786789897%29.jpg?width=400",
+    "badge": "",
+    "tags": [
+      "양식",
+      "면"
+    ],
+    "aliases": [
+      "볶음우동",
+      "해물볶음우동"
+    ]
+  },
+  {
+    "id": "western_sushi_set",
+    "category": "western",
+    "name": "초밥 세트",
+    "nameEn": "Sushi Set",
+    "price": 12500,
+    "temperature": "none",
+    "emoji": "🍣",
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Typical_japanese_sushi_set.jpg?width=400",
+    "badge": "",
+    "tags": [
+      "양식",
+      "초밥"
+    ],
+    "aliases": [
+      "초밥",
+      "초밥세트"
+    ]
+  },
+  {
+    "id": "western_deungsim_sushi",
+    "category": "western",
+    "name": "등심+초밥 세트",
+    "nameEn": "Katsu Sushi Set",
+    "price": 11500,
+    "temperature": "none",
+    "emoji": "🍣",
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Sushi_Set_%2850857770%29.jpeg?width=400",
+    "badge": "",
+    "tags": [
+      "양식",
+      "세트"
+    ],
+    "aliases": [
+      "등심초밥세트",
+      "등심초밥"
+    ]
+  },
+  {
+    "id": "western_memil_sushi",
+    "category": "western",
+    "name": "메밀+초밥 세트",
+    "nameEn": "Soba Sushi Set",
+    "price": 12500,
+    "temperature": "none",
+    "emoji": "🍣",
+    "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Japanese_Zaru_Soba.JPG?width=400",
+    "badge": "",
+    "tags": [
+      "양식",
+      "세트"
+    ],
+    "aliases": [
+      "메밀초밥세트",
+      "메밀초밥"
+    ]
+  }
+]

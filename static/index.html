@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>모아푸드코트 · AI 주문</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍽️</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<div id="app">
+
+  <!-- ============ 1) 시작 화면 ============ -->
+  <section id="screen-start" class="screen active start-screen">
+    <header class="start-top">
+      <div class="brand">
+        <div class="brand-logo">🍽️</div>
+        <div class="brand-text">
+          <div class="brand-name">모아푸드코트</div>
+          <div class="brand-sub">MOA · AI ORDER</div>
+        </div>
+      </div>
+      <div class="weather-chip" id="startWeatherChip">☀️ 오늘 <b>--℃</b> · 메뉴 추천</div>
+    </header>
+
+    <div class="start-hero">
+      <div class="mic-hero">
+        <span class="mic-hero-tag">AI 주문 도우미</span>
+        <div class="pulse-ring r1"></div>
+        <div class="pulse-ring r2"></div>
+        <div class="mic-hero-circle">🎤</div>
+      </div>
+
+      <h1 class="hero-title">말로 주문할 수<br><span class="accent">있어요</span></h1>
+      <p class="hero-desc">마이크를 누르고 편하게 말씀하세요.<br>화면을 눌러서 골라도 됩니다.</p>
+
+      <button class="btn-primary btn-jumbo" id="btnStartVoice">🎤 말로 주문하기</button>
+      <button class="btn-ghost btn-jumbo" id="btnStartTouch">👆 화면 눌러서 주문하기</button>
+
+      <div class="start-badges">
+        <span class="pill">🗣️ 사투리도 괜찮아요</span>
+        <span class="pill">🇺🇸 English OK</span>
+        <span class="pill">🧡 천천히 하셔도 돼요</span>
+      </div>
+    </div>
+
+    <footer class="start-foot">
+      <span class="rec-dot"></span> "화면을 터치하거나 말씀해 주세요."
+    </footer>
+  </section>
+
+  <!-- ============ 2) 메인 주문 화면 ============ -->
+  <section id="screen-order" class="screen order-screen">
+    <header class="order-head">
+      <div class="brand small">
+        <div class="brand-logo">🍽️</div>
+        <div class="brand-name">모아푸드코트</div>
+      </div>
+      <button class="btn-home" id="btnHome">🏠 처음으로</button>
+    </header>
+
+    <div class="weather-banner" id="weatherBanner">
+      <div class="weather-icon">🌤️</div>
+      <div class="weather-body">
+        <div class="weather-title" id="weatherTitle">오늘은 --℃, 메뉴 어떠세요?</div>
+        <div class="weather-sub" id="weatherSub">AI가 오늘 날씨에 맞춰 추천해요</div>
+      </div>
+      <div class="weather-recs" id="weatherRecs"></div>
+    </div>
+
+    <nav class="tabs" id="tabs"></nav>
+
+    <main class="menu-grid" id="menuGrid"></main>
+
+    <!-- 떠 있는 음성 버튼 -->
+    <button class="mic-fab" id="micFab" title="말로 주문">
+      <span class="mic-fab-icon">🎤</span>
+      <span class="mic-fab-label">말로 주문</span>
+    </button>
+
+    <!-- 하단 장바구니 바 -->
+    <footer class="cart-bar" id="cartBar">
+      <button class="cart-summary" id="cartSummary">
+        <span class="cart-icon">🛒<span class="cart-count" id="cartCount">0</span></span>
+        <span class="cart-texts">
+          <span class="cart-line1">담은 메뉴 <b id="cartQty">0</b>개</span>
+          <span class="cart-line2" id="cartTotal">0원</span>
+        </span>
+      </button>
+      <button class="btn-primary btn-order" id="btnGoCart">주문하기 →</button>
+    </footer>
+  </section>
+
+  <!-- ============ 3) 음성 주문 오버레이 ============ -->
+  <section id="screen-voice" class="screen voice-screen">
+    <div class="voice-top">
+      <div class="voice-status-pill" id="voicePill"><span class="rec-dot big"></span> <span id="voiceStatusText">듣고 있어요</span></div>
+
+      <div class="voice-visual">
+        <div class="wave" id="waveLeft"><i></i><i></i><i></i></div>
+        <div class="voice-mic" id="voiceMic">🎤</div>
+        <div class="wave" id="waveRight"><i></i><i></i><i></i></div>
+      </div>
+
+      <div class="voice-heard-label" id="heardLabel" style="display:none">이렇게 들었어요</div>
+      <div class="heard-card" id="heardCard" style="display:none">
+        <div class="heard-card-head">🗣️ 손님 말씀</div>
+        <div class="heard-card-text" id="heardText">"..."</div>
+      </div>
+      <div class="voice-hint" id="voiceHint" style="display:none">아래에서 확인해 주세요 👇</div>
+    </div>
+
+    <!-- 하단 확인 시트 -->
+    <div class="voice-sheet" id="voiceSheet" style="display:none"></div>
+
+    <button class="voice-touch-fallback" id="btnVoiceToTouch">👆 화면을 눌러서 직접 고르셔도 돼요</button>
+    <button class="voice-close" id="btnVoiceClose">✕</button>
+  </section>
+
+  <!-- ============ 4) 옵션 선택 모달 (터치) ============ -->
+  <div class="modal-backdrop" id="optionModal" style="display:none">
+    <div class="modal-card">
+      <button class="modal-close" id="btnOptClose">✕</button>
+      <div class="opt-emoji" id="optEmoji">🍽️</div>
+      <div class="opt-name" id="optName">메뉴</div>
+      <div class="opt-price" id="optPrice">0원</div>
+
+      <div class="opt-temp-row" id="optTempRow" style="display:none">
+        <button class="temp-btn hot" data-temp="HOT">🔥 따뜻하게</button>
+        <button class="temp-btn ice active" data-temp="ICE">🧊 시원하게</button>
+      </div>
+
+      <div class="opt-qty-row">
+        <span class="opt-qty-label">수량</span>
+        <div class="qty-stepper">
+          <button class="qty-btn" id="optMinus">－</button>
+          <span class="qty-num" id="optQty">1</span>
+          <button class="qty-btn" id="optPlus">＋</button>
+        </div>
+      </div>
+
+      <button class="btn-primary btn-jumbo" id="btnOptAdd">🛒 장바구니에 담기</button>
+    </div>
+  </div>
+
+  <!-- ============ 5) 장바구니 화면 ============ -->
+  <section id="screen-cart" class="screen cart-screen">
+    <header class="order-head">
+      <button class="btn-home" id="btnCartBack">← 이전</button>
+      <div class="head-title">장바구니</div>
+      <button class="btn-home ghost" id="btnCartHome">🏠 처음으로</button>
+    </header>
+    <main class="cart-list" id="cartList"></main>
+    <footer class="cart-foot">
+      <div class="cart-foot-total">
+        <span>총 합계</span>
+        <b id="cartFootTotal">0원</b>
+      </div>
+      <button class="btn-primary btn-jumbo" id="btnCheckout">주문하기 →</button>
+    </footer>
+  </section>
+
+  <!-- ============ 6) 최종 확인 화면 ============ -->
+  <section id="screen-confirm" class="screen confirm-screen">
+    <header class="order-head">
+      <button class="btn-home" id="btnConfirmBack">← 이전</button>
+      <div class="head-title">주문 확인</div>
+      <span style="width:96px"></span>
+    </header>
+    <main class="confirm-body">
+      <div class="confirm-list" id="confirmList"></div>
+      <div class="confirm-total">
+        <span>결제하실 금액</span>
+        <b id="confirmTotal">0원</b>
+      </div>
+    </main>
+    <footer class="cart-foot">
+      <button class="btn-primary btn-jumbo pay" id="btnPay">💳 결제하기</button>
+    </footer>
+  </section>
+
+  <!-- ============ 7) 완료 화면 ============ -->
+  <section id="screen-done" class="screen done-screen">
+    <div class="done-check">✅</div>
+    <div class="done-title">주문이 완료되었어요!</div>
+    <div class="done-sub">주문번호</div>
+    <div class="done-order-no" id="doneOrderNo">A-000</div>
+    <div class="done-guide">번호가 불리면 카운터에서 받아가세요.</div>
+    <div class="done-count" id="doneCount">10초 후 처음 화면으로 돌아갑니다</div>
+    <button class="btn-ghost btn-jumbo" id="btnDoneHome">처음으로</button>
+  </section>
+
+  <!-- 토스트 -->
+  <div class="toast" id="toast"></div>
+
+</div>
+<script src="js/app.js"></script>
+</body>
+</html>

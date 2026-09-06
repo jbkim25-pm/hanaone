@@ -1,0 +1,30 @@
+# 환경변수 / 비밀키
+.env
+*.env
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+*.egg-info/
+
+# 로그 / 임시
+*.log
+/tmp/
+uploads/
+*.webm
+*.wav
+*.mp3
+
+# OS / 에디터
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# 정리용/번들
+_to_delete/
+hanaone_bundle.tar.gz
