@@ -198,6 +198,46 @@ def build_system_prompt(menus, today_temp):
 
 
 # ------------------------------------------------------------
+# 유사 메뉴 추천 폴백 (GPT가 recommendations를 비워 보낼 때 대비)
+#   - 발화 텍스트와 메뉴 name/aliases/tags 겹침으로 점수화
+#   - 겹치는 게 없으면 인기/추천 메뉴로 대체 (항상 선택지 제공)
+# ------------------------------------------------------------
+def fallback_recommendations(text, menus, limit=3):
+    text = (text or "").strip()
+    scored = []
+    for m in menus:
+        if m.get("soldOut"):
+            continue
+        score = 0
+        name = m.get("name", "") or ""
+        for al in (m.get("aliases") or []):
+            if al and (al in text or (len(text) >= 2 and text in al)):
+                score += 5
+        for kw in (m.get("tags") or []):
+            if kw and kw in text:
+                score += 3
+        # 이름 글자 겹침(부분 표현 대응)
+        for ch in set(name):
+            if ch.strip() and ch in text:
+                score += 1
+        if score > 0:
+            scored.append((score, m))
+    scored.sort(key=lambda x: x[0], reverse=True)
+    top = [m for _, m in scored][:limit]
+    if not top:
+        pref = [m for m in menus if not m.get("soldOut") and m.get("badge") in ("추천", "인기")]
+        pool = pref or [m for m in menus if not m.get("soldOut")]
+        top = pool[:limit]
+    return [{
+        "menu_id": m["id"],
+        "name": m["name"],
+        "reason": "비슷한 메뉴",
+        "emoji": m.get("emoji", "🍔"),
+        "price": m.get("price"),
+    } for m in top]
+
+
+# ------------------------------------------------------------
 # 주문번호 생성
 # ------------------------------------------------------------
 def generate_order_no():
@@ -316,6 +356,15 @@ def api_match():
             if m:
                 rec["emoji"] = m.get("emoji", "🍔")
                 rec["price"] = m.get("price")
+
+        # 실제 판매 메뉴로 매칭된 게 없고 추천도 비었으면 → 서버 폴백 추천 채우기
+        valid_matched = [it for it in result.get("matched", []) if menu_by_id.get(it.get("menu_id"))]
+        valid_recos = [r for r in result.get("recommendations", []) if menu_by_id.get(r.get("menu_id"))]
+        if not valid_matched and not valid_recos:
+            result["recommendations"] = fallback_recommendations(text, menus)
+            if result.get("status") not in ("not_found", "unclear"):
+                result["status"] = "not_found"
+
         result["_recognizedText"] = text
         return jsonify(result)
     except Exception as e:  # noqa

@@ -92,7 +92,7 @@ function applyWeatherUI() {
   const t = State.config.todayTemp;
   const isIce = State.config.recommendTemp === 'ICE';
   const word = isIce ? '시원한' : '따뜻한';
-  $('#startWeatherChip').innerHTML = `☀️ 오늘 <b>${t}℃</b> · ${word} 메뉴 추천`;
+  $('#startWeatherChip').innerHTML = `☀️ <b>${t}℃</b> · ${word} 메뉴`;
   $('#weatherTitle').innerHTML = `오늘은 <b>${t}℃</b>, ${word} 메뉴 어떠세요?`;
   $('#weatherSub').textContent = `AI가 오늘 날씨에 맞춰 ${isIce ? '아이스' : '따뜻한'} 메뉴를 추천해요`;
 
@@ -439,18 +439,37 @@ function resetVoiceUI() {
 /* ---------- 매칭 결과 처리 ---------- */
 function handleMatch(res) {
   State.inputMethod = 'voice';
-  const status = res.status;
-  if (status === 'matched' || status === 'need_temperature') {
-    if (res.matched && res.matched.length) {
-      renderMatchedSheet(res.matched);
-      return;
+
+  // 1) 실제 판매 메뉴로 매칭된 주문 항목들
+  const matchedItems = (res.matched || []).map(buildVoiceItem).filter(Boolean);
+
+  // 2) 메뉴에 없어 추천된 항목 → '하나만' (실제 존재하는 메뉴 중 첫 번째)
+  const recoItem = (res.recommendations || [])
+    .filter(r => State.byId[r.menu_id])
+    .slice(0, 1)
+    .map(r => {
+      const vi = buildVoiceItem({ menu_id: r.menu_id, quantity: 1 });
+      if (vi) vi.isReco = true;
+      return vi;
+    })
+    .filter(Boolean)[0];
+
+  // 3) 매칭된 메뉴 + (있으면) 추천 메뉴 하나를 '한 목록'에 함께 표시
+  const combined = [...matchedItems];
+  if (recoItem) combined.push(recoItem);
+
+  if (combined.length) {
+    Voice.state = 'result';
+    // 매칭 단건뿐이면 큰 카드, 추천이 섞였거나 2개 이상이면 리스트
+    if (combined.length === 1 && !combined[0].isReco) {
+      renderSingleMatched(combined[0]);
+    } else {
+      renderMultiMatched(combined);
     }
-  }
-  if (status === 'not_found' && res.recommendations?.length) {
-    renderRecoSheet(res.recommendations, res.assistant_message || '혹시 이 메뉴 찾으세요?');
     return;
   }
-  // unclear or 빈 결과
+
+  // 4) 매칭도 추천도 없으면 재시도/터치 주문으로 유도
   voiceFail(res.assistant_message || '다시 말씀해 주시거나, 화면을 눌러 골라 주세요.');
 }
 
@@ -563,10 +582,12 @@ function renderVoiceList() {
         <button class="temp-btn hot ${it.temp==='HOT'?'active':''}" data-act="hot" data-i="${i}">🔥</button>
         <button class="temp-btn ice ${it.temp==='ICE'?'active':''}" data-act="ice" data-i="${i}">🧊</button>
       </div>` : '';
-    const sub = `${it.needTemp ? (it.temp==='ICE'?'🧊 시원하게':'🔥 따뜻하게') + ' · ' : ''}${won(unit)}`;
-    return `<div class="v-item">
+    const sub = `${it.isReco ? '💡 비슷한 메뉴로 추천 · ' : ''}${it.needTemp ? (it.temp==='ICE'?'🧊 시원하게':'🔥 따뜻하게') + ' · ' : ''}${won(unit)}`;
+    const recoTag = it.isReco ? '<div class="v-reco-tag">AI추천</div>' : '';
+    return `<div class="v-item${it.isReco ? ' reco' : ''}">
       <div class="v-thumb">${menuThumb(m)}</div>
       <div class="v-info">
+        ${recoTag}
         <div class="v-name">${m.name}</div>
         <div class="v-sub">${sub}</div>
         ${tempCtrl}
@@ -583,8 +604,11 @@ function renderVoiceList() {
     </div>`;
   }).join('');
 
+  const hasReco = Voice.list.some(it => it.isReco);
   sheet.innerHTML = `
-    <div class="sheet-q"><span class="robot">🤖</span> 이렇게 <b>${Voice.list.length}가지</b> 주문 맞으실까요?</div>
+    <div class="sheet-q"><span class="robot">🤖</span> 이렇게 <b>${Voice.list.length}가지</b> 주문 맞으실까요?
+      ${hasReco ? '<div class="sheet-note">💡 말씀하신 메뉴 중 없는 건 비슷한 메뉴로 추천해 드렸어요. 필요 없으면 🗑️ 로 빼 주세요.</div>' : ''}
+    </div>
     <div class="v-list">${rows}</div>
     <div class="v-total"><span>합계</span><b>${won(voiceListTotal())}</b></div>
     <div class="sheet-actions">
