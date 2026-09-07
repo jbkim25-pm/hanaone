@@ -22,7 +22,7 @@
   --radius:18px;
   --shadow:0 6px 18px rgba(120,60,20,.12);
   --shadow-lg:0 12px 32px rgba(120,60,20,.20);
-  --app-w:430px;           /* 모바일 화면 폭 */
+  --app-w:100%;            /* 모바일: 전체 폭 (데스크톱에서만 430px 프레임) */
 }
 
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
@@ -309,3 +309,6 @@ body{
 .v-item.reco{border:2px solid var(--orange);background:#FFF6EE}
 .v-reco-tag{display:inline-block;font-size:11px;font-weight:800;color:#fff;background:var(--orange);border-radius:6px;padding:1px 7px;margin-bottom:3px;letter-spacing:.02em}
 .sheet-note{font-size:13px;font-weight:600;color:#6B6577;margin-top:8px;line-height:1.45}
+
+/* 데스크톱/태블릿(>=600px)에서만 430px 폰 프레임으로 가운데 정렬 */
+@media (min-width:600px){ :root{ --app-w:430px } }
