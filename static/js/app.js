@@ -606,9 +606,8 @@ function renderVoiceList() {
 
   const hasReco = Voice.list.some(it => it.isReco);
   sheet.innerHTML = `
-    <div class="sheet-q"><span class="robot">🤖</span> 이렇게 <b>${Voice.list.length}가지</b> 주문 맞으실까요?
-      ${hasReco ? '<div class="sheet-note">💡 말씀하신 메뉴 중 없는 건 비슷한 메뉴로 추천해 드렸어요. 필요 없으면 🗑️ 로 빼 주세요.</div>' : ''}
-    </div>
+    <div class="sheet-q"><span class="robot">🤖</span> <span class="sheet-q-text">이렇게 <b>${Voice.list.length}가지</b> 주문 맞으실까요?</span></div>
+    ${hasReco ? '<div class="sheet-note">💡 말씀하신 메뉴 중 없는 건 비슷한 메뉴로 추천해 드렸어요. 필요 없으면 🗑️ 로 빼 주세요.</div>' : ''}
     <div class="v-list">${rows}</div>
     <div class="v-total"><span>합계</span><b>${won(voiceListTotal())}</b></div>
     <div class="sheet-actions">

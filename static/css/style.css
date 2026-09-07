@@ -308,7 +308,8 @@ body{
 /* 음성 확인 목록 - AI 추천 항목 강조 */
 .v-item.reco{border:2px solid var(--orange);background:#FFF6EE}
 .v-reco-tag{display:inline-block;font-size:11px;font-weight:800;color:#fff;background:var(--orange);border-radius:6px;padding:1px 7px;margin-bottom:3px;letter-spacing:.02em}
-.sheet-note{font-size:13px;font-weight:600;color:#6B6577;margin-top:8px;line-height:1.45}
+.sheet-q-text{flex:1;min-width:0}
+.sheet-note{font-size:14px;font-weight:600;color:#5C5670;margin-top:10px;line-height:1.5;background:#F4F1FB;border:1px solid #E7E1F5;border-radius:12px;padding:10px 14px}
 
 /* 데스크톱/태블릿(>=600px)에서만 430px 폰 프레임으로 가운데 정렬 */
 @media (min-width:600px){ :root{ --app-w:430px } }
